@@ -1,4 +1,8 @@
 <?php
+//include_once('config.php');
+?>
+
+<?php
 function runCommand($command, $token, $nodeId = null) {
     $curl = curl_init('http://panel.factorio.events:8336/api/runCommand');
     curl_setopt(

@@ -1,7 +1,6 @@
 <?php
-	include_once('include/config.php');
 	include_once('include/api.php');
-
+	include_once('include/config.php');
 	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_URL, $url);
 	curl_setopt($ch, CURLOPT_POST, 1);
@@ -9,9 +8,7 @@
 	curl_setopt($ch, CURLOPT_VERBOSE, 1);
 	curl_setopt($ch, CURLOPT_HEADER, 1);
 	curl_setopt($ch, CURLOPT_HTTPHEADER, array("X-Access-Token: $token"));
-
 	$response = curl_exec($ch);
-
 	// Then, after your curl_exec call:
 	$header_size = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
 	$header = substr($response, 0, $header_size);
@@ -19,7 +16,6 @@
 	
 	curl_close ($ch);
 ?>
-
 <html>
 	<head>
 		<title>Gridlock live map</title>
@@ -33,7 +29,6 @@
 		</style>
 	</head>
 	<body>
-
 		<?php
 			foreach($slaves as $slave) {
 				if(isset($slave['info'])) {
