@@ -43,9 +43,9 @@ $start = $time;
 		margin-left:20px;*/
 	}
 	.jumbotron {
-		background-color: #ff0000;
-    	color: #00ff00;
-    	border-color: #80ff00;
+		background-color: #000000;
+    	color: #ffdead;
+    	border-color: #152025;
 	}
 	body {
 		background-color: #0000ff;
@@ -74,11 +74,11 @@ $start = $time;
 	p{
 		font-family: Delicious-Roman;
 		font-size: 18px;
-		color: #ffffff
+		color: #ffdead
 	}
 	a{
-		font-family: Delicious-Roman;
-		color: #ffff80
+		font-family: Delicious-Bold;
+		color: #0080ff
 	}
 	
 </style>
