@@ -1,3 +1,4 @@
+<?php include("includes/head-tag-contents.php");?>
 <?php
     session_start();
     echo isset($_SESSION['login']);
