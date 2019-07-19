@@ -1,4 +1,5 @@
 <?php include("includes/head-tag-contents.php");?>
+<link href="includes/styles.css" rel="stylesheet">
 <?php
     session_start();
     echo isset($_SESSION['login']);

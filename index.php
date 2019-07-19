@@ -2,8 +2,8 @@
 	include_once("admin/includes/head-tag-contents.php");
 	include_once('include/api.php');
 	include_once('include/config.php');
-
 ?>
+<link href="/admin/includes/styles.css" rel="stylesheet">
 <html>
 	<head>
 		<title>Gridlock live map</title>

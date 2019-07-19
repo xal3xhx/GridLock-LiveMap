@@ -1,3 +1,4 @@
+<?php include("includes/head-tag-contents.php");?>
 <?php
     session_start();
     if(!isset($_SESSION['login'])) {
@@ -26,10 +27,11 @@ $ch = curl_init();
     curl_close ($ch);
 ?>
 
+<link href="includes/styles.css" rel="stylesheet">
+
 <!DOCTYPE html>
 <html>
 <head>
-<?php include("includes/head-tag-contents.php");?>
 </head>
 <body>
 
