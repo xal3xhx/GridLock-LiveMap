@@ -14,6 +14,7 @@
 
 			foreach($slaves as $slave) {
 				if(isset($slave['info'])) {
+					echo('<p>');
 					//print_r($slave);
 					print_r($slave['instanceName']);
 					echo(' @ '.$slave['publicIP'].':'.$slave['serverPort']."\r\n<br />Status: ");
@@ -43,6 +44,7 @@
 					echo("\r\n<br />\r\n");
 					//print_r($slave['info']);
 					echo("\r\n<hr />\r\n");
+					echo('</p>');
 				}
 			}
 		?>
