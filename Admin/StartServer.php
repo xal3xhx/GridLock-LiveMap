@@ -24,16 +24,11 @@
   <h2>This Will Start all selected servers.</h2>
 
 <form name="form" action="" method="post">
-  <?php include("includes/Select.php");?><br/>
+  <?php include("includes/check.php");?><br/>
   <input type="submit" name="Start" id="Start" value="Start Selected servers" /><br/>
 </form>
 
 <?php
-foreach($slaves as $slave) {
-        if(isset($slave['info'])) {
-          print_r($slave['instanceName']);
-        }
-      }
 // checks if button is pressed
 if(array_key_exists('Start',$_POST)) {
   $Server = $_POST['Server'];

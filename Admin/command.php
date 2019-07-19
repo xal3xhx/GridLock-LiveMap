@@ -29,7 +29,7 @@
 
 
 <form name="form" action="" method="post">
-<?php include("includes/Select.php");?><br/>
+<?php include("includes/check.php");?><br/>
 	<input type="text" name="command" id="command" value="">
     <input type="submit" name="RUN" id="RUN" value="RealCluster" />
     <input type="submit" name="RUNTEST" id="RUNTEST" value="TestCluster" /><br/>
