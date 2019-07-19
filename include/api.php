@@ -1,5 +1,6 @@
 <?php
 include_once('config.php');
+
 ?>
 
 <?php
@@ -57,11 +58,13 @@ function runCommandTest($command, $token, $nodeId = null) {
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
     curl_setopt($ch, CURLOPT_VERBOSE, 1);
     curl_setopt($ch, CURLOPT_HEADER, 1);
-    curl_setopt($ch, CURLOPT_HTTPHEADER, array("X-Access-Token: $token"));
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array("X-Access-Token: $token","cache-control: no-cache"));
     $response = curl_exec($ch);
+    //print_r(array("X-Access-Token: $token"));
     // Then, after your curl_exec call:
     $header_size = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
-    $header = substr($response, 0, $header_size);
+    //$header = substr($response, 0, $header_size);
+    //echo($response);
     $slaves = json_decode(substr($response, $header_size), true);
     
     curl_close ($ch);
@@ -94,4 +97,39 @@ function runCommandTest($command, $token, $nodeId = null) {
         $return->msg = $result;
         return $return;
     }
+?>
+
+<?php
+
+//ptero api that i though was going to be faster but was just slower...
+//will still be used for things later
+
+// function online($ID, $PteroToken) {
+// 	$curl = curl_init();
+
+// curl_setopt_array($curl, array(
+//   CURLOPT_URL => "https://panel.factorio.events/api/client/servers/".$ID."/utilization",
+//   CURLOPT_RETURNTRANSFER => true,
+//   CURLOPT_ENCODING => "",
+//   CURLOPT_MAXREDIRS => 10,
+//   CURLOPT_TIMEOUT => 30,
+//   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+//   CURLOPT_CUSTOMREQUEST => "GET",
+//   CURLOPT_HTTPHEADER => array(
+//     "Authorization: Bearer ".$PteroToken,
+//     "Cache-Control: no-cache"),
+// ));
+	
+// 	$res = curl_exec($curl);
+// 	$h_size = curl_getinfo($curl, CURLINFO_HEADER_SIZE);
+//     //$header = substr($res, 0, $h_size);
+//     $stat = json_decode($res, true);
+//     //echo($res);
+//     //echo($stat['attributes']['state']);
+//     // if($stat['attributes']['state']) {return True;}
+//     // else {return False;}
+
+// return $stat['attributes']['state'];
+// curl_close($curl);
+// }
 ?>

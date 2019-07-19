@@ -1,13 +1,15 @@
 <?php
-$name = "username";
-$pass = "password";
+$name = "";
+$pass = "";
+$PteroToken = '';
+
 	$test = false;
 	if($test) {
-		$token = 'test token';
-		$url = 'http://94.237.89.108:10000/api/slaves';
+		$token = '';
+		$url = '';
 	} else {
-		$token = 'real token';
-		$url = 'http://panel.factorio.events:8336/api/slaves';
+		$token = '';
+		$url = '';
 	}
-$TestToken = 'test token';
+$TestToken = '';
 ?>

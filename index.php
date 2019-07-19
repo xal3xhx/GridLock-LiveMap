@@ -13,17 +13,20 @@
     			border-color: #e6e6e6;
 			}
 		</style>
-	</head>
+</head>
 	<body>
-		<?php
-			//echo("test");
-			
-			//echo("test");
+
+<?php
+
 			foreach($slaves as $slave) {
 				if(isset($slave['info'])) {
 					//print_r($slave);
 					print_r($slave['instanceName']);
 					echo(' @ '.$slave['publicIP'].':'.$slave['serverPort']."\r\n<br />Status: ");
+					//check if online through ptero
+					//if({online("33e9b691",$PteroToken)) {
+
+					//check if online through fsocket
 					$online = is_resource(@fsockopen($slave['publicIP'], $slave['rconPort']));
 					if($online) {
 						echo('<font style="color: green">Online</font><br />');
@@ -31,7 +34,9 @@
 						echo("UPS: ");
 						echo($slave['meta']['UPS'] . "<br />\r\n");
 						$rconResult = rconCommand($slave['publicIP'], $slave['rconPort'], $slave['rconPassword'], '/p o');
+						$password = rconCommand($slave['publicIP'], $slave['rconPort'], $slave['rconPassword'], '/config get password');
 						if(!$rconResult->err) {
+							echo($password->msg."<br />\r\n");
 							echo($rconResult->msg."<br />\r\n");
 						}
 						else {
@@ -45,9 +50,6 @@
 					//print_r($slave['info']);
 					echo("\r\n<hr />\r\n");
 				}
-			}
-			if(isset($_GET['debug']) && $_GET['debug'] === 'Master-Guy') {
-				print_r($slaves);
 			}
 		?>
 	</body>
