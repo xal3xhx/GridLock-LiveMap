@@ -1,3 +1,4 @@
+<?php include("includes/head-tag-contents.php");?>
 <?php
     session_start();
     if(!isset($_SESSION['login'])) {
@@ -6,9 +7,8 @@
 ?>
 
 <!DOCTYPE html>
-<html class="dark">
+<html>
 <head>
-<?php include("includes/head-tag-contents.php");?>
 </head>
 <body>
 

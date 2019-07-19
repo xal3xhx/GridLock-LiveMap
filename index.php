@@ -1,4 +1,5 @@
 <?php
+	include_once("Admin/includes/head-tag-contents.php");
 	include_once('include/api.php');
 	include_once('include/config.php');
 
@@ -6,13 +7,6 @@
 <html>
 	<head>
 		<title>Gridlock live map</title>
-		<style>
-			body {
-				background-color: #222;
-    			color: #e6e6e6;
-    			border-color: #e6e6e6;
-			}
-		</style>
 </head>
 	<body>
 
@@ -54,3 +48,5 @@
 		?>
 	</body>
 </html>
+
+<?php include_once("Admin/includes/footer.php");?>

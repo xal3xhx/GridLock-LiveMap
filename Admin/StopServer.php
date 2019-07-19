@@ -6,7 +6,7 @@
 ?>
 
 <!DOCTYPE html>
-<html class="dark">
+<html>
 <head>
 <?php include("includes/head-tag-contents.php");?>
 </head>
