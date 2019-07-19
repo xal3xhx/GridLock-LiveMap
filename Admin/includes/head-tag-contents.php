@@ -38,26 +38,26 @@ $start = $time;
 	* {
 		background-color: #000000;
     	/*color: #ffdead;*/
-    	border-color: #ffdead;
+    	border-color: #ff8000;
 		/*margin-top:20px;
 		margin-left:20px;*/
 	}
 	.jumbotron {
-		background-color: #222;
-    	color: #e6e6e6;
-    	border-color: #e6e6e6;
+		background-color: #ff0000;
+    	color: #00ff00;
+    	border-color: #80ff00;
 	}
 	body {
-		/*background-color: #222;
-    	color: #e6e6e6;
-    	border-color: #e6e6e6;
+		background-color: #0000ff;
+    	color: #0080ff;
+    	border-color: #8000ff;
 		margin-top:20px;
-		margin-left:20px;*/
+		margin-left:20px;
 	}
 	.footer {
-		background-color: #222;
-    	color: #e6e6e6;
-    	border-color: #e6e6e6;
+		background-color: #80ff80;
+    	color: #ffff00;
+    	border-color: #00ffff;
 		margin-top:20px;
 		margin-left:20px;
 		font-size: 14px;
@@ -68,17 +68,17 @@ $start = $time;
 	    height: 1px;
 	    /*margin-left:2px;*/
 	    /* Set the hr color */
-	    color: #FF0060; /* old IE */
-	    background-color: #FF0060; /* Modern Browsers */
+	    color: #ff00ff; /* old IE */
+	    background-color: #ff80ff; /* Modern Browsers */
 	}
 	p{
 		font-family: Delicious-Roman;
 		font-size: 18px;
-		color: #ffdead
+		color: #ffffff
 	}
 	a{
 		font-family: Delicious-Roman;
-		color: #0facff
+		color: #ffff80
 	}
 	
 </style>
