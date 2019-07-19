@@ -1,5 +1,5 @@
 <?php
-	include_once("Admin/includes/head-tag-contents.php");
+	include_once("admin/includes/head-tag-contents.php");
 	include_once('include/api.php');
 	include_once('include/config.php');
 
@@ -49,4 +49,4 @@
 	</body>
 </html>
 
-<?php include_once("Admin/includes/footer.php");?>
+<?php include_once("admin/includes/footer.php");?>
