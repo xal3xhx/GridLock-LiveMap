@@ -1,5 +1,5 @@
 <div class="footer">
-	by (Alex)#6074 \ xal3xhx
+by Master-Guy#8095 and (Alex)#6074
 <?php
 	$time = microtime();
 	$time = explode(' ', $time);
