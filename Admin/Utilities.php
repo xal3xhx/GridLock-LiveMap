@@ -20,7 +20,7 @@
 <?php include('../include/config.php');?>
 
 
-<div class="container" id="main-content">
+<div class="box">
 	<h2>Here are some useful buttons we press all the time..</h2>
 
 <form name="form" action="" method="post">

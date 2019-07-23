@@ -69,3 +69,15 @@
 		font-family: Delicious-Bold;
 		color: #20a0ff
 	}
+	.box{
+		border: 50px solid transparent;
+		padding: 0px;
+		border-image: url(https://i.imgur.com/ZQ4QP5y.png) 50 stretch;
+	}
+	.container{
+		font-family: Delicious-Bold;
+		background-color: #101020;
+    	border-color: #00ffff;
+		color: #ffdead;
+		font-size:18px;
+	}
